@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+  <div id='app'>
+    <ul id='lista'></ul>
+
+
+  </div>
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    function listar(nomes){
+
+      for( var nome of nomes){
+      var listElement = document.createElement('li');
+      var textElement = document.createTextNode(nome);
+      listElement.appendChild(textElement);
+
+
+      var containerElement = document.querySelector('#lista');
+      containerElement.appendChild(listElement);
+      
+    }
+
+    }
+
+    listar(nomes);
+   
+      </script>
+
+
+</body>
+
+</html>

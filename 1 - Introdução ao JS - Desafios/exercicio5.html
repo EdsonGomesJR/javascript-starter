@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+
+  <script>
+    function listar(usuarios) {
+     
+      for (var data of usuarios) {
+
+     
+        console.log('O ' + data.nome +
+        ' possui as habilidades: ' + data.habilidades.join(', '));
+      }
+    }
+
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+    
+    listar(usuarios);
+
+  </script>
+
+
+</body>
+
+</html>

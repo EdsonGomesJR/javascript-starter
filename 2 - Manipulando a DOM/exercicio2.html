@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+  <div id='app'>
+    <button class="botao"> Gerar Quadrado</button>
+
+
+  </div>
+  <script>
+    //ref ao button criado na div
+    var btnElement = document.querySelector('.botao');
+    //função ao clicar no button
+    btnElement.onclick = function () {
+      //criar um elemento na div #app
+      var boxElement = document.createElement('div');
+      //setar atributos ao elemento
+      boxElement.setAttribute('class', 'box');
+
+      //aplicar estilos
+      boxElement.style.backgroundColor = '#f00';
+      boxElement.style.width = 100;
+      boxElement.style.height = 100;
+      boxElement.style.marginTop = 2;
+
+      //evento para mudar a cor quando o mouse passar
+      boxElement.onmouseover = function(){
+      boxElement.style.backgroundColor = getRandomColor();
+
+      }
+
+      //Inserir o boxElement no body do html, dentro da div id='app'
+      var containerElement = document.querySelector('#app');
+      containerElement.appendChild(boxElement);
+
+        }
+   
+    //função para cor aleatória
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  
+
+  </script>
+
+
+</body>
+
+</html>

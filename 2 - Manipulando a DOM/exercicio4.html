@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+  <div id='app'>
+    <ul id='lista'></ul>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+
+  </div>
+  <script>
+
+var nomes = ["Diego", "Gabriel", "Lucas"];
+var listaElement = document.querySelector('ul');
+var inputElement = document.querySelector('input');
+
+
+function addItem(texto){
+    var liElment = document.createElement('li');
+    var textElement = document.createTextNode(texto);
+    
+    liElment.appendChild(textElement);
+    listaElement.appendChild(liElment);
+}
+
+function adicionar(){
+    addItem(inputElement.value);
+    inputElement.value = ""; // limpa o campo input
+}
+
+for(nome of nomes){
+    addItem(nome);
+}
+
+  </script>
+
+
+</body>
+
+</html>
